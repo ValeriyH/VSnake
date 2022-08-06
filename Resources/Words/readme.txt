@@ -1,0 +1,1 @@
+To receive voice (mp3) from google translate use following url:http://translate.google.com/translate_tts?ie=utf-8&tl=en&q=Tomato
