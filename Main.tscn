@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Resources/Background/kiwi.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Snake_spritesheet.png" type="Texture" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://Resources/Letter/Letter-y.png" type="Texture" id=27]
 [ext_resource path="res://Resources/Letter/Letter-p.png" type="Texture" id=28]
 [ext_resource path="res://Resources/Letter/Letter-v.png" type="Texture" id=29]
+[ext_resource path="res://Controller.gd" type="Script" id=30]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Snake_spritesheet.png 0"
@@ -599,6 +600,16 @@
 26/shapes = [  ]
 26/z_index = 0
 
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Resources/fonts/Abduction.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = SubResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.741176, 0.611765, 0.611765, 1 )
+
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -618,4 +629,17 @@ format = 1
 [node name="SnakeTimer" type="Timer" parent="."]
 wait_time = 0.2
 
+[node name="Controller" type="Node2D" parent="."]
+script = ExtResource( 30 )
+
+[node name="Debug" type="Label" parent="Controller"]
+margin_right = 235.0
+margin_bottom = 65.0
+custom_colors/font_color = Color( 0.0745098, 0.0980392, 0.384314, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Hello world
+"
+
 [connection signal="timeout" from="SnakeTimer" to="." method="_on_SnakeTimer"]
+[connection signal="swipe" from="Controller" to="." method="_on_swipe"]

@@ -129,3 +129,14 @@ func update_snake():
 func _on_SnakeTimer():
 	update_snake()
 	pass
+
+func _on_swipe(direction):
+	print(direction)
+	if direction == "left":
+		snake_direction = Vector2(-1, 0)
+	if direction == "right":
+		snake_direction = Vector2(1, 0)
+	if direction == "up":
+		snake_direction = Vector2(0, -1)
+	if direction == "down":
+		snake_direction = Vector2(0, 1)
