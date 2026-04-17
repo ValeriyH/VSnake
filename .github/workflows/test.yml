@@ -28,17 +28,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+        
+      - name: Cache Godot files
+        id: cache-godot
+        uses: actions/cache@v5
+        with:
+          path: |
+            ./godot.exec
+            ~/.local/share/godot/templates/3.6.2.stable
+          key: ${{ runner.os }}-godot-3.6.2-stable
+          
       - name: Download Godot 3.6.2
+        if: steps.cache-godot.outputs.cache-hit != 'true'
         run: |
-          wget https://github.com/godotengine/godot/releases/download/3.6.2-stable/Godot_v3.6.2-stable_linux_headless.64.zip
+          wget --no-verbose https://github.com/godotengine/godot/releases/download/3.6.2-stable/Godot_v3.6.2-stable_linux_headless.64.zip
           unzip Godot_v3.6.2-stable_linux_headless.64.zip
           mv Godot_v3.6.2-stable_linux_headless.64 godot.exec
           chmod +x godot.exec
 
       - name: Install Templates
+        if: steps.cache-godot.outputs.cache-hit != 'true'
         run: |
-          wget https://github.com/godotengine/godot/releases/download/3.6.2-stable/Godot_v3.6.2-stable_export_templates.tpz
+          wget --no-verbose https://github.com/godotengine/godot/releases/download/3.6.2-stable/Godot_v3.6.2-stable_export_templates.tpz
           mkdir -p ~/.local/share/godot/templates/3.6.2.stable
           unzip Godot_v3.6.2-stable_export_templates.tpz -d temp_templates
           mv temp_templates/templates/* ~/.local/share/godot/templates/3.6.2.stable/
