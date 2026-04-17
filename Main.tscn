@@ -640,6 +640,8 @@ custom_fonts/font = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 text = "Hello world
 "
+align = 1
+valign = 1
 
 [connection signal="timeout" from="SnakeTimer" to="." method="_on_SnakeTimer"]
 [connection signal="swipe" from="Controller" to="." method="_on_swipe"]
