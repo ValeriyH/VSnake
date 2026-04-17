@@ -4,10 +4,6 @@ signal swipe
 var swipe_start = null
 var minimum_drag = 20
 
-func _ready():
-	$Debug.text = "Has virtual key:" + str(OS.has_virtual_keyboard())
-	
-
 func _unhandled_input(event):
 	if event is InputEventScreenDrag:
 		pass

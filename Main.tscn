@@ -633,6 +633,7 @@ wait_time = 0.2
 script = ExtResource( 30 )
 
 [node name="Debug" type="Label" parent="Controller"]
+visible = false
 margin_right = 235.0
 margin_bottom = 65.0
 custom_colors/font_color = Color( 0.0745098, 0.0980392, 0.384314, 1 )
@@ -642,6 +643,8 @@ text = "Hello world
 "
 align = 1
 valign = 1
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
 
 [connection signal="timeout" from="SnakeTimer" to="." method="_on_SnakeTimer"]
 [connection signal="swipe" from="Controller" to="." method="_on_swipe"]

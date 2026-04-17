@@ -12,21 +12,27 @@ const DOWN = Vector2(0, 1)
 
 var snake_direction : Vector2 = RIGHT
 var snake = []
+var words = ['apple', 'kiwi', 'lemon', 'melon',
+	'orange', 'pimiento', 'pumpkin', 'tomato']
+
+var current_word = ''
+var left_letters = ''
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
 	snake_init()
 	place_letter()
 	
 func _input(_event):
 	if Input.is_action_pressed("ui_left"):
-		snake_direction = Vector2(-1, 0)
+		change_direction(LEFT)
 	if Input.is_action_pressed("ui_right"):
-		snake_direction = Vector2(1, 0)
+		change_direction(RIGHT)
 	if Input.is_action_pressed("ui_up"):
-		snake_direction = Vector2(0, -1)
+		change_direction(UP)
 	if Input.is_action_pressed("ui_down"):
-		snake_direction = Vector2(0, 1)
+		change_direction(DOWN)
 	
 func snake_init():
 	for i in range(3):
@@ -37,13 +43,33 @@ func snake_init():
 	#Set timer interval to move snake faster or slower
 	$SnakeTimer.start()
 
+func play_letter(letter):
+	#var symbol = 'abcdefghijklmnopqrstuvwxyz'[letter - LETTER_A]
+	# letter - LETTER_A - relative shift to symbol 'a'
+	# ord('a') - ASCII number of a + shift => required symbol
+	var symbol = char(ord('a') + letter - LETTER_A)
+	var sound = load("res://Resources/Letter/%s.mp3" % symbol)
+	$Audio.stream = sound
+	$Audio.play()
+
 func place_letter():
+	if left_letters.empty():
+		# Play name of current object
+		var word_sound = load("res://Resources/Words/%s.mp3" % current_word)
+		$Audio.stream = word_sound
+		$Audio.play()
+		# Load next object
+		current_word = words.pick_random()
+		left_letters = current_word
+		$Background.texture  = load("res://Resources/Background/%s.png" % current_word)
+	
+	var letter = left_letters.ord_at(0) - ord('a') + LETTER_A
+	left_letters = left_letters.right(1)
+	
 	var placed = false
-	randomize()
 	while(!placed):
 		var x = randi() % 20
 		var y = randi() % 20
-		var letter = randi() % 26 + LETTER_A
 		if ($TileMap.get_cell(x, y) == EMPTY):
 			$TileMap.set_cell(x, y, letter)
 			placed = true
@@ -106,12 +132,22 @@ func get_snake_image(var index : int) -> Vector2:
 	# undefined	
 	return Vector2(7, 0)
 
+func change_direction(new_direction: Vector2):
+	#check if we can change direction. if not just left as is
+	var head = snake[0]
+	var pos = head + new_direction
+	var cell = $TileMap.get_cellv(pos)
+	if cell == SNAKE:
+		return
+	snake_direction = new_direction
+
 func update_snake():
 	var grow = false
 	var head = snake[0]
 	head += snake_direction
 	var object = $TileMap.get_cellv(head)
 	if  object >= LETTER_A and object <= LETTER_Z:
+		play_letter(object)
 		place_letter()
 		grow = true
 	snake.push_front(head)
@@ -133,10 +169,10 @@ func _on_SnakeTimer():
 func _on_swipe(direction):
 	print(direction)
 	if direction == "left":
-		snake_direction = Vector2(-1, 0)
+		change_direction(LEFT)
 	if direction == "right":
-		snake_direction = Vector2(1, 0)
+		change_direction(RIGHT)
 	if direction == "up":
-		snake_direction = Vector2(0, -1)
+		change_direction(UP)
 	if direction == "down":
-		snake_direction = Vector2(0, 1)
+		change_direction(DOWN)
