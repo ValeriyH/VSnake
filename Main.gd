@@ -15,8 +15,6 @@ var snake = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#if headless mode (build export)
-	if not VisualServer.get_singleton(): return
 	snake_init()
 	place_letter()
 	
