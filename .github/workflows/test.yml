@@ -1,0 +1,59 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Test workflow commands
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Godot 3.6.2
+        run: |
+          wget https://github.com/godotengine/godot/releases/download/3.6.2-stable/Godot_v3.6.2-stable_linux_headless.64.zip
+          unzip Godot_v3.6.2-stable_linux_headless.64.zip
+          mv Godot_v3.6.2-stable_linux_headless.64 godot.exec
+          chmod +x godot.exec
+
+      - name: Install Templates
+        run: |
+          wget https://downloads.godotengine.org/?version=3.6.2&flavor=stable&slug=export_templates.tpz&platform=templates
+          mkdir -p ~/.local/share/godot/templates/3.6.2.stable
+          unzip Godot_v3.6.2-stable_export_templates.tpz -d temp_templates
+          mv temp_templates/templates/* ~/.local/share/godot/templates/3.6.2.stable/
+          rm -rf temp_templates Godot_v3.6.2-stable_export_templates.tpz
+
+      - name: Export Project
+        run: |
+          mkdir -p out/release/HTML5
+          ./godot.exec --export "HTML5" out/release/HTML5/index.html --no-window --quit
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/release/HTML5
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
