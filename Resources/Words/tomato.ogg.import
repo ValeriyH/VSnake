@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tomato.ogg-70298f8553ac9cb5e6a4a5345210ab87.oggstr"
+
+[deps]
+
+source_file="res://Resources/Words/tomato.ogg"
+dest_files=[ "res://.import/tomato.ogg-70298f8553ac9cb5e6a4a5345210ab87.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

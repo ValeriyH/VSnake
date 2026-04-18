@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lemon.mp3-a5ef06ee80315b559bc007e84d08362e.mp3str"
+
+[deps]
+
+source_file="res://Resources/Words/old/lemon.mp3"
+dest_files=[ "res://.import/lemon.mp3-a5ef06ee80315b559bc007e84d08362e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

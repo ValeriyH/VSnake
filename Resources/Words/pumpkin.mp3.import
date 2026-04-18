@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pumpkin.mp3-95fb13013a5fed8480367764d94adea0.mp3str"
+
+[deps]
+
+source_file="res://Resources/Words/pumpkin.mp3"
+dest_files=[ "res://.import/pumpkin.mp3-95fb13013a5fed8480367764d94adea0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

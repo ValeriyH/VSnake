@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Crunch_I-David_Yo-9010_hifi.mp3-1f6d9cf0ba71a800d6140f005c0b29c7.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Crunch_I-David_Yo-9010_hifi.mp3"
+dest_files=[ "res://.import/Crunch_I-David_Yo-9010_hifi.mp3-1f6d9cf0ba71a800d6140f005c0b29c7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

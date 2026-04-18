@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pimiento.ogg-338a80b96a727dcd92535e85015d2779.oggstr"
+
+[deps]
+
+source_file="res://Resources/Words/pimiento.ogg"
+dest_files=[ "res://.import/pimiento.ogg-338a80b96a727dcd92535e85015d2779.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

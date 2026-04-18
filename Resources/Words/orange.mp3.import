@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/orange.mp3-2bada2bd86d630c1ede8e50f6a7519c1.mp3str"
+
+[deps]
+
+source_file="res://Resources/Words/orange.mp3"
+dest_files=[ "res://.import/orange.mp3-2bada2bd86d630c1ede8e50f6a7519c1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

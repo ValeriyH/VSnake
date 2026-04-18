@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/y.ogg-c21354d3db41ad32e2a7485ceba87e40.oggstr"
+
+[deps]
+
+source_file="res://Resources/Letter/y.ogg"
+dest_files=[ "res://.import/y.ogg-c21354d3db41ad32e2a7485ceba87e40.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

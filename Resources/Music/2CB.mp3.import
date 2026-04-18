@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2CB.mp3-fa96442e08407b8cc8cb5a8875ed6460.mp3str"
+
+[deps]
+
+source_file="res://Resources/Music/2CB.mp3"
+dest_files=[ "res://.import/2CB.mp3-fa96442e08407b8cc8cb5a8875ed6460.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

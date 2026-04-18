@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/melon.mp3-b117f8ab7dc80d645f2a570235dc8170.mp3str"
+
+[deps]
+
+source_file="res://Resources/Words/melon.mp3"
+dest_files=[ "res://.import/melon.mp3-b117f8ab7dc80d645f2a570235dc8170.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

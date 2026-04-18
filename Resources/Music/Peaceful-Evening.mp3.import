@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Peaceful-Evening.mp3-d81e23072d2195b24b3e0bd5b1e64f0e.mp3str"
+
+[deps]
+
+source_file="res://Resources/Music/Peaceful-Evening.mp3"
+dest_files=[ "res://.import/Peaceful-Evening.mp3-d81e23072d2195b24b3e0bd5b1e64f0e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

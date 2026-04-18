@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lemon.ogg-3895aa7bad5f957674491a910e07ab9c.oggstr"
+
+[deps]
+
+source_file="res://Resources/Words/lemon.ogg"
+dest_files=[ "res://.import/lemon.ogg-3895aa7bad5f957674491a910e07ab9c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

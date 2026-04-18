@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/kiwi.ogg-668720c040e6ce70c38bebb6d913b710.oggstr"
+
+[deps]
+
+source_file="res://Resources/Words/kiwi.ogg"
+dest_files=[ "res://.import/kiwi.ogg-668720c040e6ce70c38bebb6d913b710.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

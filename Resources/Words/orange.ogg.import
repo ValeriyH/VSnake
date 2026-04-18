@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/orange.ogg-be9d198c4584d95598db6e246e1031db.oggstr"
+
+[deps]
+
+source_file="res://Resources/Words/orange.ogg"
+dest_files=[ "res://.import/orange.ogg-be9d198c4584d95598db6e246e1031db.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

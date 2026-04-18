@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pumpkin.ogg-ba6ac94c3ddf6dc8d9619e0599f68751.oggstr"
+
+[deps]
+
+source_file="res://Resources/Words/pumpkin.ogg"
+dest_files=[ "res://.import/pumpkin.ogg-ba6ac94c3ddf6dc8d9619e0599f68751.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

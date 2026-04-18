@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/kiwi.mp3-a50278452ba355b61daba4b7a9a34abf.mp3str"
+
+[deps]
+
+source_file="res://Resources/Words/old/kiwi.mp3"
+dest_files=[ "res://.import/kiwi.mp3-a50278452ba355b61daba4b7a9a34abf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

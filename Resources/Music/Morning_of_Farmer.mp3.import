@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Morning_of_Farmer.mp3-0cd7abe157e282879a64636c8c1e810c.mp3str"
+
+[deps]
+
+source_file="res://Resources/Music/Morning_of_Farmer.mp3"
+dest_files=[ "res://.import/Morning_of_Farmer.mp3-0cd7abe157e282879a64636c8c1e810c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tomato.mp3-64654e8d0e3c27ccf28dd1ffa41a8cc2.mp3str"
+
+[deps]
+
+source_file="res://Resources/Words/tomato.mp3"
+dest_files=[ "res://.import/tomato.mp3-64654e8d0e3c27ccf28dd1ffa41a8cc2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

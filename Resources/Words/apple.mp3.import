@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/apple.mp3-dfb9774f5e2008a8989121f23ba0db4c.mp3str"
+
+[deps]
+
+source_file="res://Resources/Words/apple.mp3"
+dest_files=[ "res://.import/apple.mp3-dfb9774f5e2008a8989121f23ba0db4c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

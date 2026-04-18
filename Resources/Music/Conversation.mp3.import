@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Conversation.mp3-4c0abcd532d011c75d8d70857dd78749.mp3str"
+
+[deps]
+
+source_file="res://Resources/Music/Conversation.mp3"
+dest_files=[ "res://.import/Conversation.mp3-4c0abcd532d011c75d8d70857dd78749.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

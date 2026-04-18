@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pimiento.mp3-97e9491234a9e38647d30b22ad5091ca.mp3str"
+
+[deps]
+
+source_file="res://Resources/Words/old/pimiento.mp3"
+dest_files=[ "res://.import/pimiento.mp3-97e9491234a9e38647d30b22ad5091ca.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
