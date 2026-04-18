@@ -48,16 +48,19 @@ func play_letter(letter):
 	# letter - LETTER_A - relative shift to symbol 'a'
 	# ord('a') - ASCII number of a + shift => required symbol
 	var symbol = char(ord('a') + letter - LETTER_A)
-	var sound = load("res://Resources/Letter/%s.mp3" % symbol)
+	var sound = load("res://Resources/Letter/%s.mp3" % symbol) as AudioStreamMP3
+	sound.loop = false
 	$Audio.stream = sound
 	$Audio.play()
 
 func place_letter():
 	if left_letters.empty():
-		# Play name of current object
-		var word_sound = load("res://Resources/Words/%s.mp3" % current_word)
-		$Audio.stream = word_sound
-		$Audio.play()
+		if !current_word.empty():
+			# Play name of current object
+			var word_sound = load("res://Resources/Words/%s.mp3" % current_word) as AudioStreamMP3
+			word_sound.loop = false
+			$Audio.stream = word_sound
+			$Audio.play()
 		# Load next object
 		current_word = words.pick_random()
 		left_letters = current_word
